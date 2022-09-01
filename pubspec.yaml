@@ -38,7 +38,15 @@ dependencies:
   calendar_timeline: ^1.0.5
   firebase_core: ^1.21.1
   cloud_firestore: ^3.4.6
+  flutter_slidable: ^2.0.0
+  flutter_launcher_icons: ^0.10.0
 
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/yoka.png"
+  adaptive_icon_background: '#ffffff'
+  adaptive_icon_foreground: "assets/icon/yoka.png"
 dev_dependencies:
   flutter_test:
     sdk: flutter

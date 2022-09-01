@@ -8,8 +8,8 @@ class TaskModel {
   TaskModel({
     required this.title,
     required this.description,
-    this.id='',
-    this.isDone=false,
+    this.id = '',
+    this.isDone = false,
     required this.dateTime,
   });
 
@@ -30,4 +30,14 @@ class TaskModel {
       'date': dateTime
     };
   }
+
+  // Map<String, dynamic> updateToJson() {
+  //   return {
+  //     'id': id,
+  //     'title': title,
+  //     'description': description,
+  //     'isDone': isDone,
+  //     'date': dateTime
+  //   };
+  // }
 }

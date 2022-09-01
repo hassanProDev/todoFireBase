@@ -1,10 +1,13 @@
 import 'package:calendar_timeline/calendar_timeline.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:todo_app/model/task_model.dart';
 import 'package:todo_app/modules/tasks/task_item.dart';
 import 'package:todo_app/shared/style/colors.dart';
 import 'package:todo_app/utils/firebase_firestore.dart';
+
+import '../../shared/provider/my_provider.dart';
 
 class TasksScreen extends StatefulWidget {
   @override
@@ -13,9 +16,9 @@ class TasksScreen extends StatefulWidget {
 
 class _TasksScreenState extends State<TasksScreen> {
   DateTime tasksDate=DateTime.now();
-
   @override
   Widget build(BuildContext context) {
+    MyProvider provid=Provider.of<MyProvider>(context);
     return Stack(
       children: [
         Column(
@@ -26,7 +29,7 @@ class _TasksScreenState extends State<TasksScreen> {
             Expanded(
               flex: 7,
               child: Container(
-                color: onPrimaryColor,
+                color: provid.themeMode==ThemeMode.light?onPrimaryColor:blackColor,
                 child: Column(
                   children: [
                     Expanded(child: Container()),

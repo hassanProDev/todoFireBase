@@ -48,8 +48,9 @@ class HomeLayout extends StatelessWidget {
           // -------------------------------------------
 
           bottomNavigationBar: Container(
-            color: onPrimaryColor,
+            color: provid.themeMode==ThemeMode.light?onPrimaryColor:blackColor,
             child: BottomAppBar(
+
                 shape: CircularNotchedRectangle(),
                 notchMargin: 8,
                 child: BottomNavigationBar(
